@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container text-center">
+    <h2>Phone Detection in Progress</h2>
+    <img src="{{ url_for('main.video_feed') }}" width="720" height="480">
+    <p class="mt-3 text-danger">Make sure your webcam is connected.</p>
+</div>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container text-center mt-5">
+    <h2 class="mb-4">Welcome To CellSpy!</h2>
+
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }} alert-dismissible fade show" role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+
+    <!-- Run Phone Detection Button -->
+    <a href="{{ url_for('run_phone_detection') }}" class="btn btn-danger btn-lg">
+        <i class="fas fa-mobile-alt"></i> Run Phone Detection
+    </a>
+</div>
+{% endblock %}

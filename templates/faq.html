@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQs - CellSpy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Background image styling */
+        body {
+            background: url("{{ url_for('static', filename='images/background.jpg') }}") no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for questions */
+        .accordion-button {
+            font-weight: bold;
+            background-color: lightgoldenrodyellow !important; /* Light yellow background */
+            color: black !important;
+        }
+
+        /* Styling for answers */
+        .accordion-body {
+            background-color: white;
+            color: black;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 50px 20px;
+        }
+
+        .faq-section h1 {
+            text-align: left;
+            color: black;
+            margin-bottom: 30px;
+        }
+        
+    </style>
+</head>
+
+<body>
+
+    <div class="faq-section">
+        <h1 class="mb-5">Frequently Asked Questions</h1>
+
+        <div class="accordion" id="faqAccordion">
+
+            <!-- Question 1 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        How does CellSpy detect phones?
+                    </button>
+                </h2>
+                <div id="faq1" class="accordion-collapse collapse show">
+                    <div class="accordion-body">
+                        CellSpy uses the YOLOv8 object detection model with Python to analyze live camera feeds and detect phones in real time.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        Where can CellSpy be used?
+                    </button>
+                </h2>
+                <div id="faq2" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        CellSpy is ideal for classrooms, offices, exam halls, and secure zones where phone use is restricted.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        What happens when a phone is detected?
+                    </button>
+                </h2>
+                <div id="faq3" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        When a phone is detected, CellSpy triggers an alarm and optionally sends alerts to administrators or security personnel.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        Does CellSpy require an internet connection?
+                    </button>
+                </h2>
+                <div id="faq4" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        No, CellSpy can function offline for phone detection. However, an internet connection is required for cloud storage and remote alerts.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        Can CellSpy differentiate between a phone and other objects?
+                    </button>
+                </h2>
+                <div id="faq5" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Yes, YOLOv8 is a powerful object detection model that minimizes false detections by distinguishing phones from other objects.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                        How can I install CellSpy?
+                    </button>
+                </h2>
+                <div id="faq6" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        CellSpy can be installed on any system with a camera. The installation guide provides step-by-step instructions for setup.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq7">
+                        What are the system requirements for CellSpy?
+                    </button>
+                </h2>
+                <div id="faq7" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        CellSpy requires a camera, a computer with Python installed, and sufficient processing power for YOLOv8-based detection.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq8">
+                        Can CellSpy notify authorities automatically?
+                    </button>
+                </h2>
+                <div id="faq8" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Yes, CellSpy can be configured to send real-time notifications via email or SMS to designated personnel.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq9">
+                        Can CellSpy be used in large auditoriums?
+                    </button>
+                </h2>
+                <div id="faq9" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        Yes, but multiple cameras may be required to cover large spaces effectively.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="accordion-item">
+                <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq10">
+                        How fast does CellSpy detect a phone?
+                    </button>
+                </h2>
+                <div id="faq10" class="accordion-collapse collapse">
+                    <div class="accordion-body">
+                        CellSpy detects phones in real-time, typically within a fraction of a second, depending on the system's processing power.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container text-center mt-5">
+    <h2>Live Phone Detection</h2>
+    <img src="{{ url_for('video_feed') }}" width="80%" class="mt-4" style="border: 4px solid #333; border-radius: 10px;">
+    <div class="mt-4">
+        <a href="{{ url_for('dashboard') }}" class="btn btn-secondary">Back to Dashboard</a>
+    </div>
+</div>
+{% endblock %}
